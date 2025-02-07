@@ -94,13 +94,15 @@ def plot(input_file_path, output_file_path: str, name_title=False, y_zip=1):
     ax.set_yticks(np.array(range(num_seqs))*y_zip)
     ax.set_yticklabels(seq_labels, fontsize=14)
     ax.set_xlim(-0.5, num_positions - 0.5)
-    ax.set_ylim(num_seqs - 0.5, -0.5)
+
+    print(f"num seq = {num_seqs}")
+
+    ax.set_ylim(num_seqs*y_zip - 0.5*y_zip, -0.5*y_zip)
     ax.grid(False)
 
     # ax.yaxis.set_major_locator(ticker.MultipleLocator(0.8))
     yticks = ax.get_yticks()
     spacing = yticks[1] - yticks[0]  # Compute spacing
-    display(yticks)
     print(f"Current y-tick spacing: {spacing}")
 
     # Remove axes
