@@ -22,17 +22,27 @@ def get_best_text_color(bg_color_hex):
 def color_adjust(color: str):
     return get_best_text_color(color)
 
-def plot(input_file_path, output_file_path: str, name_title=False):
+def plot(input_file_path, output_file_path: str, name_title=False, y_zip=1):
     # Define colors for amino acids based on ESPript-like scheme
-    color_map = {
+    color_map1 = {
         "Hydrophobic": "#f94144",
         "Aromatic": "#f8961e",
         "Negative": "#90be6d",
         "Positive": "#4d908e",
-        "Polar uncharged": "#4a43fa",
+        "Polar uncharged": "#e15af1",
         "Sulfur_containing": "#ffe640",
         "Special": "#a186be"
     }
+    color_map2 = {
+        "Hydrophobic": "#ffd7e6",
+        "Aromatic": "#ffd7e6",
+        "Negative": "#d3f4ec",
+        "Positive": "#d3f4ec",
+        "Polar uncharged": "#fbded3",
+        "Sulfur_containing": "#fbf3d9",
+        "Special": "#a186be"
+    }
+    color_map = color_map1
     aa_color_scheme = {
         "A": color_map['Hydrophobic'], 
         "V": color_map['Hydrophobic'], 
@@ -65,23 +75,23 @@ def plot(input_file_path, output_file_path: str, name_title=False):
     num_seqs = len(seq_data)
     num_positions = len(seq_data[0])
 
-    fig, ax = plt.subplots(figsize=(num_positions * 0.2, num_seqs * 0.5))
+    fig, ax = plt.subplots(figsize=(num_positions * 0.2, num_seqs * 0.5 * y_zip))
 
     for i, seq in enumerate(seq_data):
         for j, aa in enumerate(seq):
             color = aa_color_scheme.get(aa, "black")  # Default to black if unknown
             if (aa!='-'):
-                ax.text(j, i, aa, fontdict={'fontsize': 10, 'weight': 'heavy'}, 
+                ax.text(j, i*y_zip, aa, fontdict={'fontsize': 10, 'weight': 'heavy'}, 
                         color=color_adjust(color),
                         ha="center", va="center", bbox=
                         dict(facecolor=color, edgecolor=color, boxstyle='round,pad=0.2'))
             else:
-                ax.text(j, i, aa, fontsize=20, color="black",
+                ax.text(j, i*y_zip, aa, fontsize=20, color="black",
                         ha="center", va="center", bbox=None)
 
     ax.set_xticks(range(num_positions))
     ax.set_xticklabels(range(1, num_positions + 1), fontsize=8, rotation=90)
-    ax.set_yticks(range(num_seqs))
+    ax.set_yticks(np.array(range(num_seqs))*y_zip)
     ax.set_yticklabels(seq_labels, fontsize=14)
     ax.set_xlim(-0.5, num_positions - 0.5)
     ax.set_ylim(num_seqs - 0.5, -0.5)
@@ -90,6 +100,7 @@ def plot(input_file_path, output_file_path: str, name_title=False):
     # ax.yaxis.set_major_locator(ticker.MultipleLocator(0.8))
     yticks = ax.get_yticks()
     spacing = yticks[1] - yticks[0]  # Compute spacing
+    display(yticks)
     print(f"Current y-tick spacing: {spacing}")
 
     # Remove axes
