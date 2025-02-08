@@ -22,7 +22,13 @@ def get_best_text_color(bg_color_hex):
 def color_adjust(color: str):
     return get_best_text_color(color)
 
-def plot(input_file_path, output_file_path: str, name_title=False, y_zip=1):
+def ylabel_color_map(name: str):
+    if ('H2A' in name): return '#CC978E'
+    if ('HTB' in name): return '#F39C6B'
+    if ('HTR' in name): return '#FF3864'
+    return 'black'
+
+def plot(input_file_path, output_file_path: str, name_title=False, y_zip=1, ylabel_color=False):
     # Define colors for amino acids based on ESPript-like scheme
     color_map1 = {
         "Hydrophobic": "#f94144",
@@ -92,7 +98,16 @@ def plot(input_file_path, output_file_path: str, name_title=False, y_zip=1):
     ax.set_xticks(range(num_positions))
     ax.set_xticklabels(range(1, num_positions + 1), fontsize=8, rotation=90)
     ax.set_yticks(np.array(range(num_seqs))*y_zip)
-    ax.set_yticklabels(seq_labels, fontsize=14)
+
+    ax.set_yticklabels(seq_labels, fontdict={'fontsize': 14, 'weight': 'heavy'})
+
+    if (ylabel_color==True):
+        print("setting y_label_colors...")
+        for tick_label in ax.get_yticklabels():
+            tick_label.set_color(ylabel_color_map(tick_label.get_text()))
+    else:
+        print("using defual black color for y_labels")
+    
     ax.set_xlim(-0.5, num_positions - 0.5)
 
     print(f"num seq = {num_seqs}")
