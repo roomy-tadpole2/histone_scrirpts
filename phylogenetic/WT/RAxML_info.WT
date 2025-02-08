@@ -43,7 +43,7 @@ Using fixed base frequencies
 
 RAxML was called as follows:
 
-raxmlHPC.exe -s ..\WT.phy -n WT -m PROTGAMMAAUTO -p 145201 
+raxmlHPC.exe -s ..\WT.phy -n WT -m PROTGAMMAAUTO -p 670273 
 
 
 Partition: 0 with name: No Name Provided
@@ -51,44 +51,44 @@ Base frequencies: 0.087 0.044 0.039 0.057 0.019 0.037 0.058 0.083 0.024 0.048 0.
 
 Automatic protein model assignment algorithm using ML criterion:
 
-	Partition: 0 best-scoring AA model: VT likelihood -4480.826911 with empirical base frequencies
+	Partition: 0 best-scoring AA model: VT likelihood -4480.472903 with empirical base frequencies
 
 
 Automatic protein model assignment algorithm using ML criterion:
 
-	Partition: 0 best-scoring AA model: VT likelihood -4479.719981 with empirical base frequencies
+	Partition: 0 best-scoring AA model: VT likelihood -4479.312764 with empirical base frequencies
 
 
 Automatic protein model assignment algorithm using ML criterion:
 
-	Partition: 0 best-scoring AA model: VT likelihood -4476.266621 with empirical base frequencies
+	Partition: 0 best-scoring AA model: VT likelihood -4476.251211 with empirical base frequencies
 
 
 Automatic protein model assignment algorithm using ML criterion:
 
-	Partition: 0 best-scoring AA model: VT likelihood -4474.979069 with empirical base frequencies
+	Partition: 0 best-scoring AA model: VT likelihood -4474.969411 with empirical base frequencies
 
 
-Inference[0]: Time 110.646027 GAMMA-based likelihood -4474.915755, best rearrangement setting 5
-alpha[0]: 1.296375 
+Inference[0]: Time 106.165401 GAMMA-based likelihood -4474.914829, best rearrangement setting 5
+alpha[0]: 1.297827 
 
 
 Conducting final model optimizations on all 1 trees under GAMMA-based models ....
 
 Automatic protein model assignment algorithm using ML criterion:
 
-	Partition: 0 best-scoring AA model: VT likelihood -4474.948319 with empirical base frequencies
+	Partition: 0 best-scoring AA model: VT likelihood -4474.940478 with empirical base frequencies
 
 
-Inference[0] final GAMMA-based Likelihood: -4474.907442 tree written to file c:\Users\14028\OneDrive\scripts\phylogenetic\WT\RAxML_result.WT
+Inference[0] final GAMMA-based Likelihood: -4474.907276 tree written to file d:\codes\histone_scrirpts\phylogenetic\WT\RAxML_result.WT
 
 
-Starting final GAMMA-based thorough Optimization on tree 0 likelihood -4474.907442 .... 
+Starting final GAMMA-based thorough Optimization on tree 0 likelihood -4474.907276 .... 
 
-Final GAMMA-based Score of best tree -4474.907442
+Final GAMMA-based Score of best tree -4474.907276
 
-Program execution info written to c:\Users\14028\OneDrive\scripts\phylogenetic\WT\RAxML_info.WT
-Best-scoring ML tree written to: c:\Users\14028\OneDrive\scripts\phylogenetic\WT\RAxML_bestTree.WT
+Program execution info written to d:\codes\histone_scrirpts\phylogenetic\WT\RAxML_info.WT
+Best-scoring ML tree written to: d:\codes\histone_scrirpts\phylogenetic\WT\RAxML_bestTree.WT
 
-Overall execution time: 141.603361 secs or 0.039334 hours or 0.001639 days
+Overall execution time: 135.205740 secs or 0.037557 hours or 0.001565 days
 

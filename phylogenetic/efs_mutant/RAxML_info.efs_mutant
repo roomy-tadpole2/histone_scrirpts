@@ -43,7 +43,7 @@ Using fixed base frequencies
 
 RAxML was called as follows:
 
-raxmlHPC.exe -s ..\efs_mutant.phy -n efs_mutant -m PROTGAMMAAUTO -p 391947 
+raxmlHPC.exe -s ..\efs_mutant.phy -n efs_mutant -m PROTGAMMAAUTO -p 541372 
 
 
 Partition: 0 with name: No Name Provided
@@ -51,44 +51,44 @@ Base frequencies: 0.087 0.044 0.039 0.057 0.019 0.037 0.058 0.083 0.024 0.048 0.
 
 Automatic protein model assignment algorithm using ML criterion:
 
-	Partition: 0 best-scoring AA model: VT likelihood -4542.835892 with empirical base frequencies
+	Partition: 0 best-scoring AA model: VT likelihood -4534.929959 with empirical base frequencies
 
 
 Automatic protein model assignment algorithm using ML criterion:
 
-	Partition: 0 best-scoring AA model: VT likelihood -4542.707745 with empirical base frequencies
+	Partition: 0 best-scoring AA model: VT likelihood -4534.596413 with empirical base frequencies
 
 
 Automatic protein model assignment algorithm using ML criterion:
 
-	Partition: 0 best-scoring AA model: VT likelihood -4529.102840 with empirical base frequencies
+	Partition: 0 best-scoring AA model: VT likelihood -4529.262248 with empirical base frequencies
 
 
 Automatic protein model assignment algorithm using ML criterion:
 
-	Partition: 0 best-scoring AA model: VT likelihood -4527.729770 with empirical base frequencies
+	Partition: 0 best-scoring AA model: VT likelihood -4528.047551 with empirical base frequencies
 
 
-Inference[0]: Time 107.992325 GAMMA-based likelihood -4527.658179, best rearrangement setting 5
-alpha[0]: 1.108603 
+Inference[0]: Time 104.123083 GAMMA-based likelihood -4527.854575, best rearrangement setting 5
+alpha[0]: 1.087366 
 
 
 Conducting final model optimizations on all 1 trees under GAMMA-based models ....
 
 Automatic protein model assignment algorithm using ML criterion:
 
-	Partition: 0 best-scoring AA model: VT likelihood -4527.718186 with empirical base frequencies
+	Partition: 0 best-scoring AA model: VT likelihood -4528.044700 with empirical base frequencies
 
 
-Inference[0] final GAMMA-based Likelihood: -4527.655922 tree written to file c:\Users\14028\OneDrive\scripts\phylogenetic\efs_mutant\RAxML_result.efs_mutant
+Inference[0] final GAMMA-based Likelihood: -4527.853110 tree written to file d:\codes\histone_scrirpts\phylogenetic\efs_mutant\RAxML_result.efs_mutant
 
 
-Starting final GAMMA-based thorough Optimization on tree 0 likelihood -4527.655922 .... 
+Starting final GAMMA-based thorough Optimization on tree 0 likelihood -4527.853110 .... 
 
-Final GAMMA-based Score of best tree -4527.655909
+Final GAMMA-based Score of best tree -4527.853098
 
-Program execution info written to c:\Users\14028\OneDrive\scripts\phylogenetic\efs_mutant\RAxML_info.efs_mutant
-Best-scoring ML tree written to: c:\Users\14028\OneDrive\scripts\phylogenetic\efs_mutant\RAxML_bestTree.efs_mutant
+Program execution info written to d:\codes\histone_scrirpts\phylogenetic\efs_mutant\RAxML_info.efs_mutant
+Best-scoring ML tree written to: d:\codes\histone_scrirpts\phylogenetic\efs_mutant\RAxML_bestTree.efs_mutant
 
-Overall execution time: 143.053278 secs or 0.039737 hours or 0.001656 days
+Overall execution time: 137.905470 secs or 0.038307 hours or 0.001596 days
 
